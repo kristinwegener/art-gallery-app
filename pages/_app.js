@@ -43,6 +43,14 @@ export default function App({ Component, pageProps }) {
   if (isLoading) return <div>loading...</div>;
   if (!data) return <p>no data</p>;
 
+  function onToggleFavorite({ slug }) {
+    setArtPiecesInfo((piece) =>
+      piece.slug === slug
+        ? { ...artPiecesInfo, isFavorite: !piece.isFavorite }
+        : isFavorite
+    );
+  }
+
   return (
     <>
       <SWRConfig
@@ -56,6 +64,7 @@ export default function App({ Component, pageProps }) {
           {...pageProps}
           artPieces={data}
           artPiecesInfo={artPiecesInfo}
+          onToggleFavorite={onToggleFavorite}
         />
         <Layout />
       </SWRConfig>

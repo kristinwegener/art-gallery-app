@@ -1,3 +1,7 @@
-export default function FavoriteButton({ isFavorite, onToggleFavorite }) {
-  return <button>{isFavorite ? "true" : "false"}</button>;
+export default function FavoriteButton({ isFavorite, onToggleFavorite, slug }) {
+  return (
+    <button type="button" onClick={() => onToggleFavorite(slug)}>
+      {isFavorite ? "true" : "false"}
+    </button>
+  );
 }

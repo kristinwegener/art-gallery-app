@@ -1,11 +1,10 @@
 import ArtPieces from "@/components/ArtPieces";
-import Spotlight from "@/components/Spotlight";
 
-export default function ArtPiecesPage({ data }) {
+export default function ArtPiecesPage({ artPieces }) {
   return (
     <div>
       <h1>Art Gallery App</h1>
-      <ArtPieces pieces={data}></ArtPieces>
+      <ArtPieces pieces={artPieces}></ArtPieces>
     </div>
   );
 }

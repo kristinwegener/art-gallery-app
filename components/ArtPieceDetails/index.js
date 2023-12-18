@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FavoriteButton from "../FavoriteButton";
 
 export default function ArtPieceDetails({ image, title, artist, year, genre }) {
   return (
@@ -12,6 +13,7 @@ export default function ArtPieceDetails({ image, title, artist, year, genre }) {
       <Link href="/art-pieces">
         <button>Back</button>
       </Link>
+      <FavoriteButton />
     </>
   );
 }

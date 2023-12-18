@@ -1,3 +1,3 @@
 export default function FavoriteButton({ isFavorite, onToggleFavorite }) {
-  return <button>Favorite</button>;
+  return <button>{isFavorite ? "true" : "false"}</button>;
 }

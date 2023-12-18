@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
     if (data && data.length > 0) {
       const updatedArtPiecesInfo = data.map((piece) => ({
         slug: piece.slug, // assuming each piece has a slug property
-        favorite: false, // initializing all as not favorite
+        isFavorite: false, // initializing all as not favorite
       }));
       setArtPiecesInfo(updatedArtPiecesInfo);
     }

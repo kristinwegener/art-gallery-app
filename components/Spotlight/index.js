@@ -1,11 +1,15 @@
 import ArtPiecesPreview from "../ArtPiecesPreview";
-import FavoriteButton from "../FavoriteButton";
 
-export default function Spotlight({ image, artist, title }) {
+export default function Spotlight({ image, artist, title, isFavorite }) {
   return (
     <>
       <p>Today&apos;s spotlight</p>
-      <ArtPiecesPreview image={image} artist={artist} title={title} />
+      <ArtPiecesPreview
+        image={image}
+        artist={artist}
+        title={title}
+        isFavorite={isFavorite}
+      />
     </>
   );
 }

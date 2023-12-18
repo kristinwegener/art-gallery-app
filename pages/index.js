@@ -8,13 +8,7 @@ export default function SpotlightPage({ artPieces }) {
     return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
   }
 
-  const randomNumber = getRandomIntInclusive(0, artPieces.length);
-
-  // if (!{ artPieces }) {
-  //   return <p>Errorrrrr, artPieces ist undefined</p>;
-  // } else if (!{ randomNumber }) {
-  //   return <p>Error, randomNumber ist undefined</p>;
-  // }
+  const randomNumber = getRandomIntInclusive(0, artPieces.length - 1);
 
   return (
     <div>
